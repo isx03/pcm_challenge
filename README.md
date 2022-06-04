@@ -16,7 +16,6 @@ Challenge to create a basic app to manage food orders
 
 - `apps/frontend:` Solution based on ReactJs to create interfaces.
 - `app/backend:` Solution based on Express to create the API REST.
-- `/databases:` Directory to mount databse container.
 - `/.env.sample:` File to save the settings to work with docker containers.
 - `/docker-compose.yml:` File to organice services to work with docker
 
