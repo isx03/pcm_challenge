@@ -1,0 +1,50 @@
+[
+    {
+        "id": 1,
+        "name": "Juane",
+        "price": 3.00,
+        "img": "/products/juane.png"
+    },
+    {
+        "id": 2,
+        "name": "Tacacho",
+        "price": 2.00,
+        "img": "/products/tacacho.png"
+    },
+    {
+        "id": 3,
+        "name": "Inchicapi",
+        "price": 10.00,
+        "img": "/products/inchicapi.png"
+    },
+    {
+        "id": 4,
+        "name": "Patarashca",
+        "price": 15.00,
+        "img": "/products/patarashca.png"
+    },
+    {
+        "id": 5,
+        "name": "Pollo asado",
+        "price": 10.00,
+        "img": "/products/pollo-asado.png"
+    },
+    {
+        "id": 6,
+        "name": "Chuleta",
+        "price": 10.00,
+        "img": "/products/chuleta.png"
+    },
+    {
+        "id": 7,
+        "name": "Caldo de gallina",
+        "price": 15.00,
+        "img": "/products/caldo-gallina.png"
+    },
+    {
+        "id": 8,
+        "name": "Chicha morada",
+        "price": 2,
+        "img": "/products/refresco-chicha.png"
+    }
+]

@@ -1,0 +1,9 @@
+/.env
+
+/apps/backend/package-lock.json
+/apps/backend/node_modules
+
+/apps/frontend/package-lock.json
+/apps/frontend/node_modules
+
+/databases/*

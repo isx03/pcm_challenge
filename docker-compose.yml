@@ -1,0 +1,40 @@
+version: "3.8"
+
+services:
+  pcm-adminer:
+    image: adminer:4.8.1
+    container_name: pcm-adminer
+    restart: always
+    environment:
+      - ADMINER_DEFAULT_SERVER=pcm-mysql
+    ports:
+      - ${ADMINER_PORT}:8080
+
+  pcm-mysql:
+    image: mysql:5.7
+    restart: always
+    container_name: pcm-mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: ${MYSQL_DB_ROOT_PASSWORD}
+    volumes:
+      - ${MYSQL_PATH}:/var/lib/mysql
+    ports:
+      - ${MYSQL_PORT}:3306
+
+  pcm-backend:
+    image: node:16-alpine3.14
+    container_name: pcm-backend
+    command: ash -c "cd app/ && DB_DIALECT=${BACKEND_DB_DIALECT} DB_HOST=${BACKEND_DB_HOST} DB_NAME=${BACKEND_DB_NAME} DB_USER=${BACKEND_DB_USER} DB_PASS=${BACKEND_DB_PASS} npm run dev"
+    volumes:
+      - ${BACKEND_PATH}:/app
+    ports:
+      - ${BACKEND_PORT}:3000
+
+  pcm-frontend:
+    image: node:16-alpine3.14
+    container_name: pcm-frontend
+    command: ash -c "cd app/ && REACT_APP_URL_API=${FRONTEND_URL_API} npm run start"
+    volumes:
+      - ${FRONTEND_PATH}:/app
+    ports:
+      - ${FRONTEND_PORT}:3000
